@@ -25,6 +25,9 @@ hbs.registerPartials(partials_path);
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
+app.get('/face', (req,res)=> {
+    res.render("face_det");
+})
 app.get('/home', (req,res)=> {
     res.render("home");
 })
