@@ -1,14 +1,17 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opencv JS</title>
     <!-- <script async src="js/opencv.js" onload="openCvReady();"></script> -->
-    {{!-- <script src="js/utils.js"></script>
-    <script src="js/FD.js"></script> --}}
+    
 </head>
 <body>
-    {{>face_html}}
+    <video id="cam_input" style="display:none" height="480" width="640"></video>
+    <canvas id="canvas_output" style="display: none"></canvas>
 </body>
-{{>face_js}}
+<script src="js/utils.js"></script>
+<script src="js/FD.js"></script>
+<script async src="js/opencv.js" onload="openCvReady();"></script>
 </html>

@@ -53,14 +53,14 @@ function openCvReady() {
               //     not_detected();
               // }
           }catch(err){
-              console.log(err);
+              //console.log(err);
           }
-          for (let i = 0; i < faces.size(); ++i) {
-              let face = faces.get(i);
-              let point1 = new cv.Point(face.x, face.y);
-              let point2 = new cv.Point(face.x + face.width, face.y + face.height);
-              cv.rectangle(dst, point1, point2, [255, 0, 0, 255]);
-          }
+        //   for (let i = 0; i < faces.size(); ++i) {
+        //       let face = faces.get(i);
+        //       let point1 = new cv.Point(face.x, face.y);
+        //       let point2 = new cv.Point(face.x + face.width, face.y + face.height);
+        //       cv.rectangle(dst, point1, point2, [255, 0, 0, 255]);
+        //   }
          // cv.imshow("canvas_output", dst);
           // schedule next one.
           let delay = 1000/FPS - (Date.now() - begin);
