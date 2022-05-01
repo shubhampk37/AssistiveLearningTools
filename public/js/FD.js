@@ -16,7 +16,8 @@ function openCvReady() {
       let faces = new cv.RectVector();
       let classifier = new cv.CascadeClassifier();
       let utils = new Utils('errorMessage');
-      let faceCascadeFile = '../xml/haarcascade_frontalface_default.xml'; // path to xml
+      //console.log(__dirname);
+      let faceCascadeFile = 'xml\\haarcascade_frontalface_default.xml'; // path to xml
       utils.createFileFromUrl(faceCascadeFile, faceCascadeFile, () => {
       classifier.load(faceCascadeFile); // in the callback, load the cascade from file 
   });
@@ -45,7 +46,7 @@ function openCvReady() {
           try{
               classifier.detectMultiScale(gray, faces, 1.3, 5, 0);
               if(!faces.size()){
-                      alert("Face not found");
+                      alert("Please look at the screen");
                   }
               //console.log(typeof(faces.size()));
               // if(!faces.size()){

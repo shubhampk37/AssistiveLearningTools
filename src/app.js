@@ -38,7 +38,7 @@ app.get('/ed',(req,res)=> {
     res.render("qna");
 })
 app.get('/ispy',(req,res)=> {
-    res.render("isp");
+    res.render("ispy");
 })
 app.get('/register', (req,res)=>{
     res.render("register");
