@@ -9,14 +9,15 @@ const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser");
 const auth = require("./middleware/auth");
 const Register = require("./models/registers");
-const static_path = path.join(__dirname, "../public/");
+const static_path = path.join(__dirname, "/../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
 app.use(express.static(static_path));
-// app.use('/css', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/css")));
-// app.use('/js', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/js")));
-// app.use('/jq', express.static(path.join(__dirname, "../node_modules/jquery/dist")));
+//Solving the ROOT Path problem using the named static paths
+app.use('/css', express.static(path.join(__dirname, "/../public/css")));
+app.use('/js', express.static(path.join(__dirname, "/../public/js")));
+app.use('/Images', express.static(path.join(__dirname, "/../public/Images")));
 
 app.set("view engine", "hbs");
 app.set("views", template_path);
