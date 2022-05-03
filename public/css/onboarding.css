@@ -4,70 +4,53 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Lilita One', sans-serif;
+                                                
 }
 body{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lilita One', sans-serif;
+   
 }
-
-/* nav{
-    background:rgb(247, 238, 245);
-    height: 80px;
-    width: 100%;
-}
-label.logo{
-    color:lightpink;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: rgb(10, 0, 0);
-    font-size: 20px;
-    padding: 8px 14px;
-    border-radius: 3px;
-}
-a:hover{
-    background: rgb(196, 214, 247);
-}
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-} */
-
-/* .btn .btn-outline-success{
-
-    padding: 8px 14px;
-    border-radius: 3px;
-    margin-right: 10px;
-
-} */
 
 #btn-group button .btn .btn-secondary{
 
     background-color: rgb(238, 163, 163)!important;
+    text-align: center;
 }
 
 .poster{
-    margin-top: 80px;
-    border: 15px solid  rgb(238, 163, 163);
-    border-radius: 15px;
+position: absolute;
+height: 350px;
+left: 4.38%;
+right: 50.7%;
+top: calc(50% - 350px/2 - 3px);
+
+mix-blend-mode: normal;
+border: 50px solid rgba(255, 144, 160, 0.5);
+box-sizing: border-box;
+border-radius: 25px;
+margin-top: 50px;
 }
 
-/* .lname{
-    margin-left: 0px;
-    text-align: left;
-} */
+
+.inner{
+position: absolute;
+height: 239px;
+left: 9.42%;
+right: 9.62%;
+top: calc(50% - 239px/2 - 0.5px);
+
+font-family: 'Lilita One';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 50px;
+/* or 139% */
+
+text-align: center;
+letter-spacing: 0.04em;
+font-feature-settings: 'liga' off;
+
+color: #5DA6B0;
+}
+

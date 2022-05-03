@@ -28,20 +28,26 @@ app.use(cookieParser());
 app.get('/face', (req,res)=> {
     res.render("face_det");
 })
-app.get('/home', (req,res)=> {
-    res.render("home");
-})
+
 app.get('/', (req,res)=> {
     res.render("onboarding");
 })
+app.get('/ourstory', (req,res)=> {
+    res.render("ourstory");
+})
+app.get('/categories', (req,res)=> {
+    res.render("categories");
+})
+
+
 app.get('/ed',(req,res)=> {
     res.render("qna");
 })
 app.get('/ispy',(req,res)=> {
     res.render("ispy");
 })
-app.get('/register', (req,res)=>{
-    res.render("register");
+app.get('/signup', (req,res)=>{
+    res.render("signup");
 })
 
 app.get('/login', (req,res)=> {

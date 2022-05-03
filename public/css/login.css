@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Lilita One', sans-serif;
+                                                
+}
+body{
+    font-family: 'Lilita One', sans-serif;
+    background-color: #FFFFFF;
+   
+}
+
+#btn-group button .btn .btn-secondary{
+
+    background-color: rgb(238, 163, 163)!important;
+    text-align: center;
+}
+
+.poster{
+color: #FF90A080;
+position: absolute;
+height: 450px;
+left: 27.5%;
+right: 27.58%;
+top: calc(50% - 350px/2 - 30px);
+
+mix-blend-mode: normal;
+border: 50px solid rgba(255, 144, 160, 0.5);
+box-sizing: border-box;
+border-radius: 25px;
+margin-top: 0px;
+}
+
+.email{
+position: absolute;
+width: 48px;
+height: 24px;
+left: 110px;
+top: 50px;
+
+font-family: 'Lilita One';
+font-style: normal;
+font-weight: 0;
+font-size: 30px;
+line-height: 23px;
+color: #5DA6B0;
+}
+
+#emailid{
+position: absolute;
+left: 110px;
+right: 20%;
+top: 25%;
+bottom: 30%;
+
+background: #FFFFFF;
+/* OtherTeal */
+width: 65%;
+height: 15%;
+border: 1px solid #9ED6D2;
+box-sizing: border-box;
+border-radius: 6px;
+}
+
+.password{
+    position: absolute;
+    width: 48px;
+    height: 24px;
+    left: 110px;
+    top: 180px;
+    
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 0;
+    font-size: 30px;
+    line-height: 23px;
+    color: #5DA6B0;
+}
+#pwd{
+        position: absolute;
+        left: 110px;
+        right: 20%;
+        top: 63%;
+        bottom: 30%;
+        
+        background: #FFFFFF;
+        /* OtherTeal */
+        width: 65%;
+        height: 15%;
+        border: 1px solid #9ED6D2;
+        box-sizing: border-box;
+        border-radius: 6px;
+}

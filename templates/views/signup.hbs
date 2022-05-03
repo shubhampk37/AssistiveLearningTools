@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/signup.css">
+    <link href="http://fonts.cdnfonts.com/css/lilita-one" rel="stylesheet">
+    <script src="src= https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Specially Yours</title>
+</head>
+
+<body>
+
+    {{>navbar1}}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <div class="poster">
+                    <div class="inner">
+                        <label class="fname" for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" style="font-size: 25px;
+                       text-decoration: none; 
+                        color: rgb(111, 108, 108);
+                        ">
+
+                        <label class="lastname" for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" style="font-size: 25px;
+                        text-decoration: none;
+                        color: rgb(111, 108, 108);">
+
+
+                        <label class="pemail" for="pemail">Parent's Email</label>
+                        <input type="email" id="pemail" name="pemail" style="font-size: 25px;
+                            text-decoration: none;
+                            color: rgb(111, 108, 108);">
+
+                        <label class="number" for="number" pattern="[+]{1}[0-9]{11,14}" required>Parent's Phone
+                            Number</label>
+                        <input type="tel" id="number" name="number" style="font-size: 25px;
+                            text-decoration: none;
+                            color: rgb(111, 108, 108);">
+
+                        <label class="password" for="pwd">Password</label>
+                        <input type="password" id="pwd" name="pwd" minlength="8" style="font-size: 25px;
+                        text-decoration: none;
+                        color: rgb(111, 108, 108);">
+
+                        <label class="cpassword" for="cpwd">Confirm Password</label>
+                        <input type="password" id="cpwd" name="pwd" minlength="8" style="font-size: 25px;
+                            text-decoration: none;
+                            color: rgb(111, 108, 108);">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+
+<div>
+    <a href="/onboardings.html">
+        <button type="button" href="/onboardings.html" style="
+                position: absolute;
+                width: 120px;
+                height: 46px;
+                left: 690px;
+                top: 655px;
+                margin: 5px; 
+                border-radius: 5px; 
+                width: 150px; 
+                background-color: #5DA6B0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 27px;
+                align-items: center;" class=" btn btn-secondary">Sign Up
+        </button>
+    </a>
+</div>
+<br>
+<br>
+{{>footer}}
+
+</html>
