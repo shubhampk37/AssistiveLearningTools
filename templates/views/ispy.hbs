@@ -3,13 +3,21 @@
 <head lang="en">
 <meta charset="UTF-8">
 <title>Picture Quiz</title>
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="css/qnastyle.css">
+{{!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> --}}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/qnastyle.css">
+<link rel="stylesheet" href="/css/onboarding.css">
+<link href="http://fonts.cdnfonts.com/css/lilita-one" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/qnastyle.css">
 </head>
 <body>
     {{>navbar1}}
+    <br><br>
     {{>face_html}}
 <div style="margin-top:5%" class="grid">
+    
     <div id="quiz">
     <h1>Picture Quiz</h1>
     <hr style="margin-bottom: 20px">
@@ -31,7 +39,7 @@
     </footer>
     </div>
 </div>
-<script type="text/javascript" src="js/isp_q.js"></script>
+<script type="text/javascript" src="/js/isp_q.js"></script>
 {{>face_js}}
 </body>
 </html>

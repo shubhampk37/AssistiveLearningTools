@@ -9,7 +9,7 @@ const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser");
 const auth = require("./middleware/auth");
 const Register = require("./models/registers");
-const static_path = path.join(__dirname, "../public");
+const static_path = path.join(__dirname, "../public/");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
@@ -44,6 +44,19 @@ app.get("/ed", (req, res) => {
 });
 app.get("/ispy", (req, res) => {
   res.render("ispy");
+});
+
+app.get("/categories/ISpy_bl", (req, res) => {
+  res.render("ISpy_bl");
+});
+app.get("/categories/ISpy_bl/ispy_game", (req, res) => {
+  res.render("ispy");
+});
+app.get("/categories/ISpy_bl/ispy_prereq_1", (req, res) => {
+  res.render("ispy_prereq_1");
+});
+app.get("/categories/ISpy_bl/ispy_prereq_2", (req, res) => {
+  res.render("ispy_prereq_2");
 });
 app.get("/signup", (req, res) => {
   res.render("signup");

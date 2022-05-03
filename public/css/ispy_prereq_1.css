@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Lilita One", sans-serif;
 }
+
 body {
   font-family: "Lilita One", sans-serif;
   background-color: #ffffff;
@@ -16,37 +17,37 @@ body {
   text-align: center;
 }
 
-.poster {
+.gamename {
   position: absolute;
-  height: 350px;
-  left: 4.38%;
-  right: 50.7%;
-  top: calc(50% - 350px / 2 - 3px);
-
-  mix-blend-mode: normal;
-  border: 50px solid rgba(255, 144, 160, 0.5);
-  box-sizing: border-box;
-  border-radius: 25px;
-  margin-top: 50px;
-}
-
-.inner {
-  position: absolute;
-  height: 239px;
-  left: 9.42%;
-  right: 9.62%;
-  top: calc(50% - 239px / 2 - 0.5px);
+  height: 82px;
+  left: 412px;
+  right: 395px;
+  top: 116px;
 
   font-family: "Lilita One";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 50px;
-  /* or 139% */
-
+  line-height: 41px;
   text-align: center;
-  letter-spacing: 0.04em;
-  font-feature-settings: "liga" off;
+
+  /* OgTeal/Teal1 */
 
   color: #5da6b0;
+}
+
+.arrow {
+  border: solid #5da6b0;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 25px;
+  width: 25px;
+  margin-top: 0.3%;
+  margin-left: 160%;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
