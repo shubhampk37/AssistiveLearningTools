@@ -16,9 +16,9 @@ const partials_path = path.join(__dirname, "../templates/partials");
 app.use(express.static(static_path));
 //Solving the ROOT Path problem using the named static paths
 //commit check from github for pull
-app.use('/css', express.static(path.join(__dirname, "/../public/css")));
-app.use('/js', express.static(path.join(__dirname, "/../public/js")));
-app.use('/Images', express.static(path.join(__dirname, "/../public/Images")));
+app.use("/css", express.static(path.join(__dirname, "/../public/css")));
+app.use("/js", express.static(path.join(__dirname, "/../public/js")));
+app.use("/Images", express.static(path.join(__dirname, "/../public/Images")));
 
 app.set("view engine", "hbs");
 app.set("views", template_path);
@@ -51,6 +51,7 @@ app.get("/ispy", (req, res) => {
 app.get("/categories/ISpy_bl", (req, res) => {
   res.render("ISpy_bl");
 });
+
 app.get("/categories/ISpy_bl/ispy_game", (req, res) => {
   res.render("ispy");
 });
@@ -60,6 +61,46 @@ app.get("/categories/ISpy_bl/ispy_prereq_1", (req, res) => {
 app.get("/categories/ISpy_bl/ispy_prereq_2", (req, res) => {
   res.render("ispy_prereq_2");
 });
+app.get("/categories/emotioni_bl", (req, res) => {
+  res.render("emotioni_bl");
+});
+app.get("/categories/emotioni_bl/emotioni_prereq_1", (req, res) => {
+  res.render("emotioni_prereq_1");
+});
+app.get("/categories/emotioni_bl/emotioni_prereq_2", (req, res) => {
+  res.render("emotioni_prereq_2");
+});
+app.get("/categories/emotioni_bl/emotioni_prereq_3", (req, res) => {
+  res.render("emotioni_prereq_3");
+});
+app.get("/categories/emotioni_bl/emotioni_prereq_4", (req, res) => {
+  res.render("emotioni_prereq_4");
+});
+app.get("/categories/emotioni_bl/ed", (req, res) => {
+  res.render("qna");
+});
+app.get("/categories/socialstory_bl", (req, res) => {
+  res.render("socialstory_bl");
+});
+app.get("/categories/socialstory_bl/socialstory_prereq1", (req, res) => {
+  res.render("socialstory_prereq1");
+});
+app.get("/categories/socialstory_bl/socialstory_prereq2", (req, res) => {
+  res.render("socialstory_prereq2");
+});
+app.get("/categories/socialstory_bl/socialstory_prereq3", (req, res) => {
+  res.render("socialstory_prereq3");
+});
+app.get("/categories/socialstory_bl/socialstory_prereq4", (req, res) => {
+  res.render("socialstory_prereq4");
+});
+app.get("/categories/basicmath_bl", (req, res) => {
+  res.render("basicmath_bl");
+});
+app.get("/categories/basicmath_bl/basic_math_prereq", (req, res) => {
+  res.render("basic_math_prereq");
+});
+
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
