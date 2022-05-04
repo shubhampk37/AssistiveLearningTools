@@ -17,6 +17,15 @@ var images = {
   green2: "green2.jpg",
   oval1: "oval1.jpg",
   oval2: "oval2.jpg",
+  apple: "apple.jpg",
+  ball1: "ball(1).jpg",
+  balloon: "balloon (1).jpg",
+  chocolate: "chocolate (1).jpg",
+  elephant: "elephant.jpg",
+  grapes: "grapes.jpg",
+  hat: "hat.jpg",
+  shoes: "shoes.jpg",
+  sun: "sun.jpg",
 };
 function populate() {
   if (quiz.isEnded()) {
@@ -65,8 +74,8 @@ function showScores() {
 // create questions
 var questions = [
   new Question(
-    "Which one is a Star?",
-    ["rectangle1", "circle2", "oval1", "star1"],
+    "Which one is a star?",
+    ["chocolate", "circle2", "oval1", "star1"],
     "star1"
   ),
   new Question(
@@ -74,12 +83,17 @@ var questions = [
     ["oval2", "rectangle1", "circle1", "star2"],
     "oval2"
   ),
+  new Question(
+    "Which one is grey?",
+    ["red2", "grapes", "elephant", "green2"],
+    "elephant"
+  ),
   // new Question("choose parrot pls?", ["hen", "parrot", "goat",  "dog"], "parrot"),
   //new Question("Find cat below?", ["parrot", "goat", "cat", "tiger"], "cat"),
   new Question(
-    "Which one is red?",
-    ["green1", "purple2", "yellow1", "red1"],
-    "red1"
+    "Which one is yellow?",
+    ["green1", "purple2", "sun", "red1"],
+    "sun"
   ),
   new Question(
     "Which one is green?",
