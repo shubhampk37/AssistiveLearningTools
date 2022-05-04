@@ -15,6 +15,7 @@ const partials_path = path.join(__dirname, "../templates/partials");
 
 app.use(express.static(static_path));
 //Solving the ROOT Path problem using the named static paths
+//commit check from github for pull
 app.use('/css', express.static(path.join(__dirname, "/../public/css")));
 app.use('/js', express.static(path.join(__dirname, "/../public/js")));
 app.use('/Images', express.static(path.join(__dirname, "/../public/Images")));
