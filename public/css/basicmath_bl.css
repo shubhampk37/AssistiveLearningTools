@@ -23,23 +23,22 @@ body {
   height: 326px;
   left: 38%;
   top: 25%;
-  /* border: 3px solid #5DA6B0; */
+  /* border: 0.5px solid #FFB2A7; */
 }
 
 .text {
   position: absolute;
-  width: 108px;
+  width: 221px;
   height: 52px;
-  left: 790px;
-  top: 110px;
+  left: 755px;
+  top: 124px;
 
   font-family: "Lilita One";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
-
-  color: #5da6b0;
+  color: #ffb2a7;
 }
 
 .prerequisites {
