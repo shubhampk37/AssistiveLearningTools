@@ -20,7 +20,7 @@ app.use(express.static(static_path));
 app.use("/css", express.static(path.join(__dirname, "/../public/css")));
 app.use("/js", express.static(path.join(__dirname, "/../public/js")));
 app.use("/Images", express.static(path.join(__dirname, "/../public/Images")));
-
+app.use("/xml", express.static(path.join(__dirname, "/../public/xml")));
 app.set("view engine", "hbs");
 app.set("views", template_path);
 hbs.registerPartials(partials_path);
@@ -144,7 +144,7 @@ app.post("/login", async (req, res) => {
       httpOnly: true,
     });
     if (isMatch) {
-      res.status(201).render("index");
+      res.status(201).render("onboarding");
     } else {
       res.send("Login Credentials do not match");
     }
@@ -153,7 +153,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.post("/register", async (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
     const password = req.body.password;
     const cpassword = req.body.confirmpassword;
@@ -164,8 +164,8 @@ app.post("/register", async (req, res) => {
         lastname: req.body.lastname,
         email: req.body.email,
         phone: req.body.phone,
-        gender: req.body.gender,
-        age: req.body.age,
+        // gender: req.body.gender,
+        // age: req.body.age,
         password: req.body.password,
         confirmpassword: req.body.confirmpassword,
       });

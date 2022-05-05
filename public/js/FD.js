@@ -7,6 +7,7 @@ function openCvReady() {
           video.play();
       })
       .catch(function(err) {
+          alert("No selected")
           console.log("An error occurred! " + err);
       });
       let src = new cv.Mat(video.height, video.width, cv.CV_8UC4);
@@ -17,27 +18,13 @@ function openCvReady() {
       let classifier = new cv.CascadeClassifier();
       let utils = new Utils('errorMessage');
       //console.log(__dirname);
-      let faceCascadeFile = 'xml\\haarcascade_frontalface_default.xml'; // path to xml
+      let faceCascadeFile = '\\xml\\haarcascade_frontalface_default.xml'; // path to xml
       utils.createFileFromUrl(faceCascadeFile, faceCascadeFile, () => {
       classifier.load(faceCascadeFile); // in the callback, load the cascade from file 
   });
       const FPS = 24;
       var lock = false;
   
-      // function  not_detected() {
-      //     // do stuff
-      //     if (lock) {
-      //         lock = false;
-      //         setTimeout(function() {
-      //             // the timeout function
-                  
-                  
-      //         }, 5000);
-      //     }
-      //     if(!faces.size()){
-      //                 alert("Face not found");
-      //             }
-      // }
       function processVideo() {
           let begin = Date.now();
           cap.read(src);
@@ -68,6 +55,6 @@ function openCvReady() {
           setTimeout(processVideo, delay);
   }
   // schedule first one.
-  setTimeout(processVideo, 10000);
+  setTimeout(processVideo, 20000);
     };
   }

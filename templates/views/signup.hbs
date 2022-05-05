@@ -18,12 +18,13 @@
 
     {{>navbar1}}
     <div class="container">
-        <div class="row mt-5">
+        <form method="POST" action="/signup" class="register-form" id="register-form">
+            <div class="row mt-5">
             <div class="col">
                 <div class="poster">
                     <div class="inner">
-                        <label class="fname" for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" style="font-size: 25px;
+                        <label class="fname" for="firstname">First Name</label>
+                        <input type="text" id="fname" name="firstname" style="font-size: 25px;
                        text-decoration: none; 
                         color: rgb(111, 108, 108);
                         ">
@@ -34,53 +35,55 @@
                         color: rgb(111, 108, 108);">
 
 
-                        <label class="pemail" for="pemail">Parent's Email</label>
-                        <input type="email" id="pemail" name="pemail" style="font-size: 25px;
+                        <label class="pemail" for="email">Parent's Email</label>
+                        <input type="email" id="pemail" name="email" style="font-size: 25px;
                             text-decoration: none;
                             color: rgb(111, 108, 108);">
 
-                        <label class="number" for="number" pattern="[+]{1}[0-9]{11,14}" required>Parent's Phone
+                        <label class="number" for="phone" pattern="[+]{1}[0-9]{11,14}" required>Parent's Phone
                             Number</label>
-                        <input type="tel" id="number" name="number" style="font-size: 25px;
+                        <input type="tel" id="number" name="phone" style="font-size: 25px;
                             text-decoration: none;
                             color: rgb(111, 108, 108);">
 
-                        <label class="password" for="pwd">Password</label>
-                        <input type="password" id="pwd" name="pwd" minlength="8" style="font-size: 25px;
+                        <label class="password" for="password">Password</label>
+                        <input type="password" id="pwd" name="password"  style="font-size: 25px;
                         text-decoration: none;
                         color: rgb(111, 108, 108);">
 
-                        <label class="cpassword" for="cpwd">Confirm Password</label>
-                        <input type="password" id="cpwd" name="pwd" minlength="8" style="font-size: 25px;
+                        <label class="cpassword" for="confirmpassword">Confirm Password</label>
+                        <input type="password" id="cpwd" name="confirmpassword"  style="font-size: 25px;
                             text-decoration: none;
                             color: rgb(111, 108, 108);">
                     </div>
                 </div>
             </div>
         </div>
+        <div>
+                <a href="/">
+                    <input type="submit" value="Sign Up" href="/" style="
+                            position: absolute;
+                            width: 120px;
+                            height: 46px;
+                            left: 750px;
+                            top: 690px;
+                            margin: 5px; 
+                            border-radius: 5px; 
+                            width: 150px; 
+                            background-color: #5DA6B0;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 24px;
+                            line-height: 27px;
+                            align-items: center;" class=" btn btn-secondary">Sign Up
+                    
+                </a>
+            </div>
+        </form>
 </body>
 
 
-<div>
-    <a href="/onboardings.html">
-        <button type="button" href="/onboardings.html" style="
-                position: absolute;
-                width: 120px;
-                height: 46px;
-                left: 750px;
-                top: 690px;
-                margin: 5px; 
-                border-radius: 5px; 
-                width: 150px; 
-                background-color: #5DA6B0;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 24px;
-                line-height: 27px;
-                align-items: center;" class=" btn btn-secondary">Sign Up
-        </button>
-    </a>
-</div>
+            
 <br>
 <br>
 {{!-- {{>footer}} --}}

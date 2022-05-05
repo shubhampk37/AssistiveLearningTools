@@ -17,7 +17,8 @@
 <body>
     {{>navbar1}}
     <div class="container">
-        <div class="row mt-5">
+        <form method="POST" action="/login" class="register-form" id="login-form">
+            <div class="row mt-5">
             <div class="col">
                 <div class="poster">
                     <div class="inner">
@@ -28,8 +29,8 @@
                         color: rgb(65, 61, 61);
                         ">
                         <br>
-                        <label class="password" for="pwd">Password</label>
-                        <input type="password" id="pwd" name="pwd" minlength="8" style="font-size: 25px;
+                        <label class="password" for="password">Password</label>
+                        <input type="password" id="pwd" name="password"  style="font-size: 25px;
                         text-decoration: none;
                         color: rgb(65, 61, 61);">
                     </div>
@@ -39,7 +40,7 @@
 
         <div>
             {{!-- <a href="/onboardings.html"> --}}
-                <button type="button"  style="
+                <input type="submit" value="Login" style="
                         position: absolute;
                         width: 120px;
                         height: 46px;
@@ -53,10 +54,11 @@
                         font-weight: 400;
                         font-size: 24px;
                         line-height: 27px;
-                        align-items: center;" class=" btn btn-secondary">Login
-                </button>
+                        align-items: center;" class=" btn btn-secondary">
             {{!-- </a> --}}
         </div>
+        </form>
+        
         <br>
         <br>
         {{!-- {{>footer}} --}}
