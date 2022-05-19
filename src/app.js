@@ -13,6 +13,9 @@ const static_path = path.join(__dirname, "/../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
+let logState = false;
+let Uname = "User";
+
 app.use(express.static(static_path));
 //Solving the ROOT Path problem using the named static paths
 //Local chnages 
@@ -32,74 +35,74 @@ app.get("/face", (req, res) => {
   res.render("face_det");
 });
 
-app.get("/", (req, res) => {
-  res.render("onboarding");
+app.get("/", (req, res) => { 
+    res.render("onboarding", {Uname: Uname, logState: logState})
 });
 app.get("/ourstory", (req, res) => {
-  res.render("ourstory");
+  res.render("ourstory", {Uname: Uname, logState: logState});
 });
 app.get("/categories", (req, res) => {
-  res.render("categories");
+  res.render("categories", {Uname: Uname, logState: logState});
 });
 
 app.get("/ed", (req, res) => {
-  res.render("qna");
+  res.render("qna", {Uname: Uname, logState: logState});
 });
 app.get("/ispy", (req, res) => {
-  res.render("ispy");
+  res.render("ispy", {Uname: Uname, logState: logState});
 });
 
 app.get("/categories/ISpy_bl", (req, res) => {
-  res.render("ISpy_bl");
+  res.render("ISpy_bl", {Uname: Uname, logState: logState});
 });
 
 app.get("/categories/ISpy_bl/ispy_game", (req, res) => {
-  res.render("ispy");
+  res.render("ispy", {Uname: Uname, logState: logState});
 });
 app.get("/categories/ISpy_bl/ispy_prereq_1", (req, res) => {
-  res.render("ispy_prereq_1");
+  res.render("ispy_prereq_1", {Uname: Uname, logState: logState});
 });
 app.get("/categories/ISpy_bl/ispy_prereq_2", (req, res) => {
-  res.render("ispy_prereq_2");
+  res.render("ispy_prereq_2", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl", (req, res) => {
-  res.render("emotioni_bl");
+  res.render("emotioni_bl", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_1", (req, res) => {
-  res.render("emotioni_prereq_1");
+  res.render("emotioni_prereq_1", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_2", (req, res) => {
-  res.render("emotioni_prereq_2");
+  res.render("emotioni_prereq_2", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_3", (req, res) => {
-  res.render("emotioni_prereq_3");
+  res.render("emotioni_prereq_3", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_4", (req, res) => {
-  res.render("emotioni_prereq_4");
+  res.render("emotioni_prereq_4", {Uname: Uname, logState: logState});
 });
 app.get("/categories/emotioni_bl/ed", (req, res) => {
-  res.render("qna");
+  res.render("qna", {Uname: Uname, logState: logState});
 });
 app.get("/categories/socialstory_bl", (req, res) => {
-  res.render("socialstory_bl");
+  res.render("socialstory_bl", {Uname: Uname, logState: logState});
 });
 app.get("/categories/socialstory_bl/socialstory_prereq1", (req, res) => {
-  res.render("socialstory_prereq1");
+  res.render("socialstory_prereq1", {Uname: Uname, logState: logState});
 });
 app.get("/categories/socialstory_bl/socialstory_prereq2", (req, res) => {
-  res.render("socialstory_prereq2");
+  res.render("socialstory_prereq2", {Uname: Uname, logState: logState});
 });
 app.get("/categories/socialstory_bl/socialstory_prereq3", (req, res) => {
-  res.render("socialstory_prereq3");
+  res.render("socialstory_prereq3", {Uname: Uname, logState: logState});
 });
 app.get("/categories/socialstory_bl/socialstory_prereq4", (req, res) => {
-  res.render("socialstory_prereq4");
+  res.render("socialstory_prereq4", {Uname: Uname, logState: logState});
 });
 app.get("/categories/basicmath_bl", (req, res) => {
-  res.render("basicmath_bl");
+  res.render("basicmath_bl", {Uname: Uname, logState: logState});
 });
 app.get("/categories/basicmath_bl/basic_math_prereq", (req, res) => {
-  res.render("basic_math_prereq");
+  res.render("basic_math_prereq", {Uname: Uname, logState: logState});
 });
 
 app.get("/signup", (req, res) => {
@@ -122,6 +125,7 @@ app.get("/logout", auth, async (req, res) => {
     console.log("logout successfully");
 
     await req.user.save();
+    logState = false;
     res.render("login");
   } catch (error) {
     res.status(500).send(error);
@@ -144,7 +148,9 @@ app.post("/login", async (req, res) => {
       httpOnly: true,
     });
     if (isMatch) {
-      res.status(201).render("onboarding");
+      logState = true;
+      Uname = useremail.firstname;
+      res.status(201).render("onboarding",{Uname: Uname, logState: logState});
     } else {
       res.send("Login Credentials do not match");
     }
