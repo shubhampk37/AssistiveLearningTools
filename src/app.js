@@ -18,7 +18,7 @@ let Uname = "User";
 
 app.use(express.static(static_path));
 //Solving the ROOT Path problem using the named static paths
-//Local chnages 
+//Local chnages
 //commit check from github for pull
 app.use("/css", express.static(path.join(__dirname, "/../public/css")));
 app.use("/js", express.static(path.join(__dirname, "/../public/js")));
@@ -35,77 +35,77 @@ app.get("/face", (req, res) => {
   res.render("face_det");
 });
 
-app.get("/", (req, res) => { 
-    res.render("onboarding", {Uname: Uname, logState: logState})
+app.get("/", (req, res) => {
+  res.render("onboarding", { Uname: Uname, logState: logState });
 });
-app.get("/testS", (req, res) => { 
-  res.render("socialStoryQ", {Uname: Uname, logState: logState})
+app.get("/categories/socialstory_bl/socialgame", (req, res) => {
+  res.render("socialStoryQ", { Uname: Uname, logState: logState });
 });
 app.get("/ourstory", (req, res) => {
-  res.render("ourstory", {Uname: Uname, logState: logState});
+  res.render("ourstory", { Uname: Uname, logState: logState });
 });
 app.get("/categories", (req, res) => {
-  res.render("categories", {Uname: Uname, logState: logState});
+  res.render("categories", { Uname: Uname, logState: logState });
 });
 
 app.get("/ed", (req, res) => {
-  res.render("qna", {Uname: Uname, logState: logState});
+  res.render("qna", { Uname: Uname, logState: logState });
 });
 app.get("/ispy", (req, res) => {
-  res.render("ispy", {Uname: Uname, logState: logState});
+  res.render("ispy", { Uname: Uname, logState: logState });
 });
 
 app.get("/categories/ISpy_bl", (req, res) => {
-  res.render("ISpy_bl", {Uname: Uname, logState: logState});
+  res.render("ISpy_bl", { Uname: Uname, logState: logState });
 });
 
 app.get("/categories/ISpy_bl/ispy_game", (req, res) => {
-  res.render("ispy", {Uname: Uname, logState: logState});
+  res.render("ispy", { Uname: Uname, logState: logState });
 });
 app.get("/categories/ISpy_bl/ispy_prereq_1", (req, res) => {
-  res.render("ispy_prereq_1", {Uname: Uname, logState: logState});
+  res.render("ispy_prereq_1", { Uname: Uname, logState: logState });
 });
 app.get("/categories/ISpy_bl/ispy_prereq_2", (req, res) => {
-  res.render("ispy_prereq_2", {Uname: Uname, logState: logState});
+  res.render("ispy_prereq_2", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl", (req, res) => {
-  res.render("emotioni_bl", {Uname: Uname, logState: logState});
+  res.render("emotioni_bl", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_1", (req, res) => {
-  res.render("emotioni_prereq_1", {Uname: Uname, logState: logState});
+  res.render("emotioni_prereq_1", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_2", (req, res) => {
-  res.render("emotioni_prereq_2", {Uname: Uname, logState: logState});
+  res.render("emotioni_prereq_2", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_3", (req, res) => {
-  res.render("emotioni_prereq_3", {Uname: Uname, logState: logState});
+  res.render("emotioni_prereq_3", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl/emotioni_prereq_4", (req, res) => {
-  res.render("emotioni_prereq_4", {Uname: Uname, logState: logState});
+  res.render("emotioni_prereq_4", { Uname: Uname, logState: logState });
 });
 app.get("/categories/emotioni_bl/ed", (req, res) => {
-  res.render("qna", {Uname: Uname, logState: logState});
+  res.render("qna", { Uname: Uname, logState: logState });
 });
 app.get("/categories/socialstory_bl", (req, res) => {
-  res.render("socialstory_bl", {Uname: Uname, logState: logState});
+  res.render("socialstory_bl", { Uname: Uname, logState: logState });
 });
 app.get("/categories/socialstory_bl/socialstory_prereq1", (req, res) => {
-  res.render("socialstory_prereq1", {Uname: Uname, logState: logState});
+  res.render("socialstory_prereq1", { Uname: Uname, logState: logState });
 });
 app.get("/categories/socialstory_bl/socialstory_prereq2", (req, res) => {
-  res.render("socialstory_prereq2", {Uname: Uname, logState: logState});
+  res.render("socialstory_prereq2", { Uname: Uname, logState: logState });
 });
 app.get("/categories/socialstory_bl/socialstory_prereq3", (req, res) => {
-  res.render("socialstory_prereq3", {Uname: Uname, logState: logState});
+  res.render("socialstory_prereq3", { Uname: Uname, logState: logState });
 });
 app.get("/categories/socialstory_bl/socialstory_prereq4", (req, res) => {
-  res.render("socialstory_prereq4", {Uname: Uname, logState: logState});
+  res.render("socialstory_prereq4", { Uname: Uname, logState: logState });
 });
 app.get("/categories/basicmath_bl", (req, res) => {
-  res.render("basicmath_bl", {Uname: Uname, logState: logState});
+  res.render("basicmath_bl", { Uname: Uname, logState: logState });
 });
 app.get("/categories/basicmath_bl/basic_math_prereq", (req, res) => {
-  res.render("basic_math_prereq", {Uname: Uname, logState: logState});
+  res.render("basic_math_prereq", { Uname: Uname, logState: logState });
 });
 
 app.get("/signup", (req, res) => {
@@ -153,7 +153,9 @@ app.post("/login", async (req, res) => {
     if (isMatch) {
       logState = true;
       Uname = useremail.firstname;
-      res.status(201).render("onboarding",{Uname: Uname, logState: logState});
+      res
+        .status(201)
+        .render("onboarding", { Uname: Uname, logState: logState });
     } else {
       res.send("Login Credentials do not match");
     }

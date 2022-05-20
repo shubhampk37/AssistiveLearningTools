@@ -17,22 +17,22 @@ function onDragEnd(e) {
   e.currentTarget.style.backgroundColor = "#4AAE9B";
 }
 
-function check(){
-  let  parent = document.getElementById("dropzone");
+function check() {
+  let parent = document.getElementById("dropzone");
   let moved = parent.children;
   let answered = [];
-  let correct = ['d1','d3','d2','d4'];
-  for(i=0;i<moved.length;i++){
+  let correct = ["d1", "d2", "d3", "d4"];
+  for (i = 0; i < moved.length; i++) {
     answered.push(moved[i].getAttribute("id"));
   }
-  if(moved.length==4){
-    if(JSON.stringify(answered)==JSON.stringify(correct)){
-        alert("Correct answer")
-    }
-    else alert("Wrong answer")
-  }
-  else{
-    alert("Place all the images")
+  if (moved.length == 4) {
+    if (JSON.stringify(answered) == JSON.stringify(correct)) {
+      document.querySelector(".example-dropzone").style.backgroundColor =
+        "#60b347";
+      alert("Correct answer");
+    } else alert("Wrong answer");
+  } else {
+    alert("Place all the images");
   }
   console.log(answered);
 }
