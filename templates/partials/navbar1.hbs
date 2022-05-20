@@ -81,23 +81,6 @@
       </a>
 
       {{#if logState}}
-      <a href="/myprofile.html">
-                    <button type="button" href="/myprofile.html" style="margin: 5px; 
-                border-radius: 5px; 
-                width: 250px; 
-                background-color:  #5da6b0;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 24px;
-                line-height: 27px;
-                align-items: center;" class="btn btn-secondary">
-               
-                  Hi, {{Uname}} </button>
-
-                    
-
-                </a>
-
       <a href="/logout">
         <button
           type="button"
@@ -112,6 +95,28 @@
         >Log out
         </button>
       </a>
+      <a href="/myprofile.html">
+                    <button type="button" href="/myprofile.html" style="margin: 5px; 
+                border-radius: 5px; 
+                width: 250px; 
+                background-color:  #5da6b0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 27px;
+                align-items: center;" class="btn btn-secondary">
+               
+                  Hi, {{Uname}} !</button>
+                <!-- <img src="/Images/Profile.png" alt="" style="position: absolute;
+                    left: 92%;
+                    right: 8.5%;
+                    top: 15%;
+                    bottom: 13.04%;
+                    background: none;"> -->
+                    
+
+                </a>
+
       {{else}}
         <a href="/login">
         <button

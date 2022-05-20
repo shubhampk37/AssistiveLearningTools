@@ -38,6 +38,9 @@ app.get("/face", (req, res) => {
 app.get("/", (req, res) => { 
     res.render("onboarding", {Uname: Uname, logState: logState})
 });
+app.get("/testS", (req, res) => { 
+  res.render("socialStoryQ", {Uname: Uname, logState: logState})
+});
 app.get("/ourstory", (req, res) => {
   res.render("ourstory", {Uname: Uname, logState: logState});
 });
